@@ -69,19 +69,19 @@
                     <div class="container">
                         <div class="row">
                             @foreach($domains as $domain)
-                                <div class="col-md-6 col-lg-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row row-sm align-items-center">
-                                                <div class="col-auto">
-                                                </div>
-                                                <div class="col">
-                                                    <h3 class="mb-0"><a href="#"> https://octopusx.io/domains/ {{$domain->domain_name}}</a></h3>
-                                                    <div class="text-muted text-h5">Domain</div>
-                                                </div>
-                                                <div class="col-auto lh-1 align-self-start">
-                                                </div>
-                                            </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                                    <div class="card card-sm">
+                                        <div class="card-body d-flex align-items-center">
+                                <span class=" text-white stamp mr-3 " style="background: none">
+                                  <span class="mt-4">
+                                   <img src="{{cdn('assets/images/icons/domain.svg')}}">
+                                  </span>
+                                </span>
+                                <div class="mr-3 lh-sm">
+                                    <div class="strong">
+                                        {{$domain->domain_name}}
+                                    </div>
+                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +91,6 @@
                 </div>
            @endif
     </div>
-
     <div class="modal fade" id="create_domain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 
         <div class="modal-dialog modal-lg" role="document">

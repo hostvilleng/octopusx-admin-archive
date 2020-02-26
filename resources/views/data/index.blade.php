@@ -57,7 +57,6 @@
                                       <div class="strong">
                                           {{$model->model_name}}
                                       </div>
-                                      <div class="text-muted">32 shipped</div>
                                   </div>
                               </div>
                           </div>

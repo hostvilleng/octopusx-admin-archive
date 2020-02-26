@@ -3,7 +3,26 @@
 @section('body_content_main')
     <div class="page-main">
         @section('navbar')
+
             @include('layouts.blocks.nav')
+            @if(session()->has('error'))
+                <div class="container px-5 py-5">
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fe fe-alert-triangle"></i>
+                        {{session()->get('error')}}
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+                    </div>
+                </div>
+            @endif
+            @if(session()->has('success'))
+                <div class="container px-5 py-5">
+                    <div class="alert alert-success" role="alert">
+                        <i class="fe fe-alert-triangle"></i>
+                        {{session()->get('success')}}
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+                    </div>
+                </div>
+            @endif
             <div class="page-header">
                 <div class="container">
                     <div class="row align-items-center">
@@ -45,10 +64,10 @@
                                 </div>
 
                                 <div class="avatar-list avatar-list-stacked mb-3">
-                                    <span class="avatar avatar-sm">JL</span>
+                                    <span class="avatar avatar-sm">{{$access->access_name[0] . $access->access_name[-1]}}</span>
                                 </div>
                                 <div class="text-muted font-weight-normal mt-0">Granted Users</div>
-                                <h3 class="h2 mt-2 mb-3">1,950</h3>
+{{--                                <h3 class="h2 mt-2 mb-3">0</h3>--}}
                             </div>
                         </div>
                     </div>
@@ -67,15 +86,26 @@
                         <!-- SVG icon code -->
                     </button>
                 </div>
+                <div class="modal-body">
+                    <form method="post" action="{{route('access')}}">
+                        @csrf
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label" for="profile_name">Access Name</label>
+                                <input  id="access_name" type="text" class="form-control" name="access_name"  placeholder="example (Admin Access) "/>
+                            </div>
 
-                <div class="modal-footer">
-                    <a href="#" class="btn btn-link link-secondary" data-dismiss="modal">
-                        Cancel
-                    </a>
-                    <a href="#" class="btn btn-primary ml-auto" data-dismiss="modal">
-                        <!-- SVG icon code -->
-                        Create new Access
-                    </a>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-link link-secondary" data-dismiss="modal">
+                                Cancel
+                            </a>
+                            <button type="submit"  href="#" class="btn btn-primary ml-auto" >
+                                <!-- SVG icon code -->
+                                Create new Access
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

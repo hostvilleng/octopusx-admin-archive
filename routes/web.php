@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::group(['namespace' => 'Access'], function () {
         Route::get('/access','Access@index')->name('access');
+        Route::post('/access','Access@create')->name('access');
     });
     Route::group(['namespace' => 'Data'], function () {
         Route::get('/data','Data@index')->name('data');

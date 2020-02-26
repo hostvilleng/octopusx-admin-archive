@@ -18,7 +18,7 @@
                             <div class="text-right text-secondary">
                                 <i class="fe fe-package"></i>
                             </div>
-                            <div class="h1 m-0">43</div>
+                            <div class="h1 m-0">{{$domains}}</div>
                             <div class="text-muted mb-4">Domains</div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                             <div class="text-right text-green">
                                 <i class="fe fe-user-check"></i>
                             </div>
-                            <div class="h1 m-0">43</div>
+                            <div class="h1 m-0">{{$profiles}}</div>
                             <div class="text-muted mb-4">Profile Services</div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             <div class="text-right text-primary">
                                 <i class="fe fe-lock"></i>
                             </div>
-                            <div class="h1 m-0">43</div>
+                            <div class="h1 m-0">{{$access}}</div>
                             <div class="text-muted mb-4">Access Services</div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                             <div class="text-right text-warning">
                                 <i class="fe fe-database"></i>
                             </div>
-                            <div class="h1 m-0">43</div>
+                            <div class="h1 m-0">{{$data}}</div>
                             <div class="text-muted mb-4">Data Services</div>
                         </div>
                     </div>
@@ -64,54 +64,24 @@
                   <div class="col-md-6">
                       <div class="card">
                           <div class="card-header">
-                              <h3 class="card-title">Development Activity</h3>
+                              <h3 class="card-title">Created  Users</h3>
                           </div>
                           <div class="table-responsive">
                               <table class="table card-table table-striped table-vcenter">
                                   <thead>
                                   <tr>
-                                      <th colspan="2">User</th>
-                                      <th>Commit</th>
+                                      <th >User</th>
                                       <th>Date</th>
-                                      <th></th>
                                   </tr>
                                   </thead>
                                   <tbody>
+                                  @foreach($users as $user)
                                   <tr>
-                                      <td class="w-1"><span class="avatar" style="background-image: url(./demo/faces/male/9.jpg)"></span></td>
-                                      <td>Ronald Bradley</td>
-                                      <td>Initial commit</td>
-                                      <td class="text-nowrap">May 6, 2018</td>
-                                      <td class="w-1"><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
+                                      <td>{{$user->name}}</td>
+                                      <td class="text-nowrap">{{$user->created_at}}</td>
                                   </tr>
-                                  <tr>
-                                      <td><span class="avatar">BM</span></td>
-                                      <td>Russell Gibson</td>
-                                      <td>Main structure</td>
-                                      <td class="text-nowrap">April 22, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
-                                  <tr>
-                                      <td><span class="avatar" style="background-image: url(./demo/faces/female/1.jpg)"></span></td>
-                                      <td>Beverly Armstrong</td>
-                                      <td>Left sidebar adjustments</td>
-                                      <td class="text-nowrap">April 15, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
-                                  <tr>
-                                      <td><span class="avatar" style="background-image: url(./demo/faces/male/4.jpg)"></span></td>
-                                      <td>Bobby Knight</td>
-                                      <td>Topbar dropdown style</td>
-                                      <td class="text-nowrap">April 8, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
-                                  <tr>
-                                      <td><span class="avatar" style="background-image: url(./demo/faces/female/11.jpg)"></span></td>
-                                      <td>Sharon Wells</td>
-                                      <td>Fixes #625</td>
-                                      <td class="text-nowrap">April 9, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
+                                  @endforeach
+
                                   </tbody>
                               </table>
                           </div>
@@ -120,54 +90,27 @@
                   <div class="col-md-6">
                       <div class="card">
                           <div class="card-header">
-                              <h3 class="card-title">Development Activity</h3>
+                              <h3 class="card-title">Active Accesses</h3>
                           </div>
                           <div class="table-responsive">
                               <table class="table card-table table-striped table-vcenter">
                                   <thead>
                                   <tr>
-                                      <th colspan="2">User</th>
-                                      <th>Commit</th>
+                                      <th > Access Admin</th>
+                                      <th>Access Service</th>
                                       <th>Date</th>
                                       <th></th>
                                   </tr>
                                   </thead>
                                   <tbody>
-                                  <tr>
-                                      <td class="w-1"><span class="avatar" style="background-image: url(./demo/faces/male/9.jpg)"></span></td>
-                                      <td>Ronald Bradley</td>
-                                      <td>Initial commit</td>
-                                      <td class="text-nowrap">May 6, 2018</td>
-                                      <td class="w-1"><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
-                                  <tr>
-                                      <td><span class="avatar">BM</span></td>
-                                      <td>Russell Gibson</td>
-                                      <td>Main structure</td>
-                                      <td class="text-nowrap">April 22, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
-                                  <tr>
-                                      <td><span class="avatar" style="background-image: url(./demo/faces/female/1.jpg)"></span></td>
-                                      <td>Beverly Armstrong</td>
-                                      <td>Left sidebar adjustments</td>
-                                      <td class="text-nowrap">April 15, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
-                                  <tr>
-                                      <td><span class="avatar" style="background-image: url(./demo/faces/male/4.jpg)"></span></td>
-                                      <td>Bobby Knight</td>
-                                      <td>Topbar dropdown style</td>
-                                      <td class="text-nowrap">April 8, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
-                                  <tr>
-                                      <td><span class="avatar" style="background-image: url(./demo/faces/female/11.jpg)"></span></td>
-                                      <td>Sharon Wells</td>
-                                      <td>Fixes #625</td>
-                                      <td class="text-nowrap">April 9, 2018</td>
-                                      <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                  </tr>
+                                  @foreach($active_access as $active)
+                                      <tr>
+                                          <td>{{auth()->user()->name}}</td>
+                                          <td>{{$active->access_name}}</td>
+                                          <td>{{$active->created_at}}</td>
+                                          <td><span class="badge badge-success">Active</span></td>
+                                      </tr>
+                                      @endforeach
                                   </tbody>
                               </table>
                           </div>
