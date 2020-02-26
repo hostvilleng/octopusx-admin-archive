@@ -76,7 +76,7 @@
                                                 <div class="col-auto">
                                                 </div>
                                                 <div class="col">
-                                                    <h3 class="mb-0"><a href="#">{{$domain->domain_name}}</a></h3>
+                                                    <h3 class="mb-0"><a href="#"> https://octopusx.io/domains/ {{$domain->domain_name}}</a></h3>
                                                     <div class="text-muted text-h5">Domain</div>
                                                 </div>
                                                 <div class="col-auto lh-1 align-self-start">
@@ -102,7 +102,7 @@
                         <!-- SVG icon code -->
                     </button>
                 </div>
-                <form action="{{route('data')}}" method="post">
+                <form action="{{route('domain')}}" method="post">
                     @csrf
 
                     <div class="modal-body">
@@ -126,7 +126,7 @@
                         <a href="#" class="btn btn-link link-secondary" data-dismiss="modal">
                             Cancel
                         </a>
-                        <button type="submit" class="btn btn-primary ml-auto" data-dismiss="modal">
+                        <button type="submit" class="btn btn-primary ml-auto">
                             <!-- SVG icon code -->
                             Create new Domain
                         </button>
