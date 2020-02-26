@@ -19,7 +19,7 @@
                                 <i class="fe fe-package"></i>
                             </div>
                             <div class="h1 m-0">{{$domains}}</div>
-                            <div class="text-muted mb-4">Domains</div>
+                            <div class="text-muted mb-4">Domain Services</div>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                   <div class="col-md-6">
                       <div class="card">
                           <div class="card-header">
-                              <h3 class="card-title">Active Accesses</h3>
+                              <h3 class="card-title">Active Access Services </h3>
                           </div>
                           <div class="table-responsive">
                               <table class="table card-table table-striped table-vcenter">

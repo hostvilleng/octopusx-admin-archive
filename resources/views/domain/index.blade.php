@@ -73,9 +73,7 @@
                                     <div class="card card-sm">
                                         <div class="card-body d-flex align-items-center">
                                 <span class=" text-white stamp mr-3 " style="background: none">
-                                  <span class="mt-4">
-                                   <img src="{{cdn('assets/images/icons/domain.svg')}}">
-                                  </span>
+                                  <img src="{{cdn('assets/images/icons/domain.svg')}}" class="h-7">
                                 </span>
                                 <div class="mr-3 lh-sm">
                                     <div class="strong">

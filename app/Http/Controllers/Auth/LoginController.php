@@ -35,10 +35,6 @@ class LoginController extends Controller
      * @return void
      */
 
-    public function login(Request $request)
-    {
-        dd($request->all());
-    }
 
     public function __construct()
     {
