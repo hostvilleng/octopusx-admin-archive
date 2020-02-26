@@ -28,8 +28,8 @@ class Profile extends Controller
         }
     }
 
-    public function profileUsers($id){
-        $profile = \App\Models\Profile::findorFail($id);
+    public function profileUsers(Request $request){
+        $profile = \App\Models\Profile::findorFail($request->get('_id'));
         $profileUsers = $profile->profile_user()->get();
         return view('profile.profile_user',compact('profile','profileUsers'));
     }

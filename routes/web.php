@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
    });
     Route::group(['namespace' => 'Domain'], function () {
         Route::get('/domain','Domain@index')->name('domain');
+        Route::post('/domain','Domain@index')->name('domain');
     });
     Route::group(['namespace' => 'Access'], function () {
         Route::get('/access','Access@index')->name('access');
@@ -40,7 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::group(['namespace' => 'Profile'], function () {
         Route::get('/profile','Profile@index')->name('profile');
-        Route::get('/profile/{id}','Profile@profileUsers')->name('profile-users');
+        Route::get('/user','Profile@profileUsers')->name('profile-users');
         Route::post('/profile','Profile@create')->name('profile');
         Route::post('/profile_user','Profile@createUser')->name('profile-create');
     });

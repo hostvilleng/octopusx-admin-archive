@@ -89,10 +89,13 @@
                                         <div class="row align-items-center mt-4">
                                             <div class="col-auto">
                                                 <div class="btn-list">
+                                                    <form method="get" action="{{route('profile-users')}}">
+                                                        <input name="_id" value="{{$profile->id}}">
+                                                        <button type="submit" class="btn btn-secondary btn-sm" >
+                                                            Create users
+                                                        </button>
+                                                    </form>
 
-                                                    <a href="{{route('profile-users',[$profile->id])}}" class="btn btn-secondary btn-sm" >
-                                                        Create users
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

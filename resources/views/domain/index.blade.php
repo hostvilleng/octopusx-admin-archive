@@ -4,6 +4,24 @@
     <div class="page-main">
         @section('navbar')
             @include('layouts.blocks.nav')
+            @if(session()->has('error'))
+                <div class="container px-5 py-5">
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fe fe-alert-triangle"></i>
+                        {{session()->get('error')}}
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+                    </div>
+                </div>
+            @endif
+            @if(session()->has('success'))
+                <div class="container px-5 py-5">
+                    <div class="alert alert-success" role="alert">
+                        <i class="fe fe-alert-triangle"></i>
+                        {{session()->get('success')}}
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+                    </div>
+                </div>
+            @endif
            @if ($domains->isEmpty())
                 <div class="row px-9 py-9 mt-5">
                     <div class="col col-login mx-auto">

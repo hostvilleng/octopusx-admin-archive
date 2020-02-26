@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Octopusx-Domain/.idea/Octopusx-Domain.iml" filepath="$PROJECT_DIR$/../Octopusx-Domain/.idea/Octopusx-Domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/octopusx-admin.iml" filepath="$PROJECT_DIR$/.idea/octopusx-admin.iml" />
     </modules>
   </component>
