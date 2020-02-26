@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <label class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" />
-                                <span class="custom-control-label">Agree the <a href="terms.html">terms and policy</a></span>
+                                <span class="custom-control-label">Agree the <a href=".">terms and policy</a></span>
                             </label>
                         </div>
                         <div class="form-footer">

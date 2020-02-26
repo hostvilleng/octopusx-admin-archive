@@ -61,7 +61,7 @@
                             <!-- Page title actions -->
                             <div class="col-auto ml-auto d-print-none">
                                 <div class="d-flex">
-                                    <a href="#" class="btn btn-primary"  data-toggle="modal" data-target="#create_domain">
+                                    <a href="#" class="btn btn-primary text-white"  data-toggle="modal" data-target="#create_domain">
                                         <i class="fe fe-plus-circle"></i>
                                         New Profile
                                     </a>
@@ -130,7 +130,7 @@
                         </a>
                         <button type="submit" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#create_profile_user" >
                             <!-- SVG icon code -->
-                            Create new Service
+                            Create new profile
                         </button>
                     </div>
                 </form>

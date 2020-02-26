@@ -68,7 +68,7 @@
                             <!-- Page title actions -->
                             <div class="col-auto ml-auto d-print-none">
                                 <div class="d-flex">
-                                    <a  class="btn btn-primary"  data-toggle="modal" data-target="#create_user">
+                                    <a  class="btn btn-primary text-white"  data-toggle="modal" data-target="#create_user">
                                         <i class="fe fe-plus-circle"></i>
                                         New User
                                     </a>
@@ -79,6 +79,27 @@
                 </div>
                 <div class="container">
                     <div class="row">
+                        @foreach($profileUsers as $user)
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row row-sm align-items-center">
+                                            <div class="col-auto">
+                                                <span class="avatar avatar-md" style="background-image: url(./static/avatars/002m.jpg)"></span>
+                                            </div>
+                                            <div class="col">
+                                                <h3 class="mb-0"><a href="#">{{$user->name}}</a></h3>
+                                                <div class="text-muted text-h5">{{$user->email}}</div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row align-items-center mt-4">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
                     </div>
                 </div>
             @endif
@@ -94,20 +115,35 @@
                         <!-- SVG icon code -->
                     </button>
                 </div>
-                <form method="post" action="{{route('profile')}}">
+                <form method="post" action="{{route('profile-create')}}">
                     @csrf
-                    <div class="modal-body">
+                    <input type="hidden" class="form-control" value="{{$profile->id}}" name="_id">
 
+                    <div class="card-body p-6">
+                        <div class="card-title">Create new account</div>
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" placeholder="Enter email" name="email">
 
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control " placeholder="Password" name="password">
+
+                        </div>
+
+                        <div class="form-footer">
+                            <button type="submit" class="btn btn-primary btn-block">Create new user</button>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <a href="#" class="btn btn-link link-secondary" data-dismiss="modal">
                             Cancel
                         </a>
-                        <button type="submit" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#create_profile_user" >
-                            <!-- SVG icon code -->
-                            Create new Service
-                        </button>
                     </div>
                 </form>
 

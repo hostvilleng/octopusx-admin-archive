@@ -39,8 +39,9 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::group(['namespace' => 'Profile'], function () {
         Route::get('/profile','Profile@index')->name('profile');
-        Route::get('/profile/users/{id}','Profile@profileUsers')->name('profile-users');
+        Route::get('/profile/{id}','Profile@profileUsers')->name('profile-users');
         Route::post('/profile','Profile@create')->name('profile');
+        Route::post('/profile_user','Profile@createUser')->name('profile-create');
     });
 
 });
