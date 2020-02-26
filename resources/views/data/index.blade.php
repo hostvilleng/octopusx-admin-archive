@@ -6,6 +6,24 @@
             @include('layouts.blocks.nav')
             <div class="page-header">
                 <div class="container">
+                    @if(session()->has('error'))
+                        <div class="container px-5 py-5">
+                            <div class="alert alert-danger" role="alert">
+                                <i class="fe fe-alert-triangle"></i>
+                                {{session()->get('error')}}
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+                            </div>
+                        </div>
+                    @endif
+                    @if(session()->has('success'))
+                        <div class="container px-5 py-5">
+                            <div class="alert alert-success" role="alert">
+                                <i class="fe fe-alert-triangle"></i>
+                                {{session()->get('success')}}
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
+                            </div>
+                        </div>
+                    @endif
                     <div class="row align-items-center">
                         <div class="col-auto">
                             <h2 class="page-title">
@@ -59,16 +77,28 @@
                         <!-- SVG icon code -->
                     </button>
                 </div>
+                <div class="modal-body">
+                    <form method="post" action="{{route('data')}}">
+                        @csrf
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label" for="profile_name">Model Name</label>
+                                <input  id="model_name" type="text" class="form-control" name="model_name"  placeholder="example (EmployeesModel) "/>
+                            </div>
 
-                <div class="modal-footer">
-                    <a href="#" class="btn btn-link link-secondary" data-dismiss="modal">
-                        Cancel
-                    </a>
-                    <a href="#" class="btn btn-primary ml-auto" data-dismiss="modal">
-                        <!-- SVG icon code -->
-                        Create new Model
-                    </a>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-link link-secondary" data-dismiss="modal">
+                                Cancel
+                            </a>
+                            <button type="submit"  href="#" class="btn btn-primary ml-auto" >
+                                <!-- SVG icon code -->
+                                Create new Model
+                            </button>
+                        </div>
+                    </form>
                 </div>
+
             </div>
         </div>
     </div>

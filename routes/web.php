@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     Route::group(['namespace' => 'Data'], function () {
         Route::get('/data','Data@index')->name('data');
+        Route::post('/data','Data@create')->name('data');
     });
     Route::group(['namespace' => 'Profile'], function () {
         Route::get('/profile','Profile@index')->name('profile');

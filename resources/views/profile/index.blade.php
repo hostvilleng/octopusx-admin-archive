@@ -128,7 +128,7 @@
                         <a href="#" class="btn btn-link link-secondary" data-dismiss="modal">
                             Cancel
                         </a>
-                        <button type="submit" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#create_profile_user" >
+                        <button type="submit" class="btn btn-primary ml-auto" data-toggle="modal" >
                             <!-- SVG icon code -->
                             Create new profile
                         </button>
