@@ -39,10 +39,10 @@ class Profile extends Controller
             $profile = \App\Models\Profile::find($request->_id);
             $body = $request->except('_token');
             $profileUsers = $profile->profile_user()->create($body);
-            return redirect()->route('profile-users',[$profile->id])->with(['success'=>'User Detail Created Successfully']);
+            return redirect()->back()->with(['success'=>'User Detail Created Successfully']);
         }
         catch (\Exception $e){
-            return redirect()->route('profile-users',[$profile->id])->with(['error'=>$e->getMessage()]);
+            return redirect()->back()->with(['error'=>$e->getMessage()]);
 
         }
     }

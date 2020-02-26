@@ -90,7 +90,7 @@
                                             <div class="col-auto">
                                                 <div class="btn-list">
                                                     <form method="get" action="{{route('profile-users')}}">
-                                                        <input name="_id" value="{{$profile->id}}">
+                                                        <input type="hidden" name="_id" value="{{$profile->id}}">
                                                         <button type="submit" class="btn btn-secondary btn-sm" >
                                                             Create users
                                                         </button>

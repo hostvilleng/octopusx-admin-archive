@@ -65,6 +65,29 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="container">
+                        <div class="row">
+                            @foreach($domains as $domain)
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row row-sm align-items-center">
+                                                <div class="col-auto">
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="mb-0"><a href="#">{{$domain->domain_name}}</a></h3>
+                                                    <div class="text-muted text-h5">Domain</div>
+                                                </div>
+                                                <div class="col-auto lh-1 align-self-start">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
                 </div>
            @endif
     </div>
@@ -79,7 +102,7 @@
                         <!-- SVG icon code -->
                     </button>
                 </div>
-                <form action="{{route('profile')}}" method="post">
+                <form action="{{route('data')}}" method="post">
                     @csrf
 
                     <div class="modal-body">
